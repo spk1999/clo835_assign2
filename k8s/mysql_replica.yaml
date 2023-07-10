@@ -3,16 +3,16 @@ kind: ReplicaSet
 metadata:
   name: mysql-replicaset
   labels:
-    app: mysql
+    app: mysql-updated
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: mysql
+      app: mysql-updated
   template:
     metadata:
       labels:
-        app: mysql
+        app: mysql-updated
     spec:
       containers:
       - name: mysql
